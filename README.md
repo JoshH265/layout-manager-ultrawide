@@ -3,6 +3,10 @@
 Preset and dynamic window layouts, switchable with keyboard shortcuts,
 working on a single ultra-wide (G9) display.
 
+> **Built by agents:** this project was authored entirely by AI coding agents
+> running through [opencode](https://opencode.ai), as a test of agent-driven
+> development capabilities. All code, docs, and iteration were agent-produced.
+
 ## Shortcuts
 
 | Key       | Action |
