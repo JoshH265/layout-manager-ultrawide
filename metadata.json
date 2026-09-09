@@ -1,0 +1,17 @@
+{
+    "KPlugin": {
+        "Name": "Layout Manager",
+        "Description": "Preset and dynamic window layouts with keyboard mode switching",
+        "Icon": "preferences-system-windows",
+        "Authors": [
+            { "Name": "Josh" }
+        ],
+        "Id": "layout-manager",
+        "Version": "1.0",
+        "License": "GPLv3",
+        "Website": "https://github.com/JoshH265/layout-manager-ultrawide"
+    },
+    "X-Plasma-API": "javascript",
+    "X-Plasma-MainScript": "code/main.js",
+    "KPackageStructure": "KWin/Script"
+}
