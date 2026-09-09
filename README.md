@@ -66,34 +66,3 @@ All configuration lives in the `CONFIG` object at the top of
 `contents/code/main.js` (KWin scripts cannot read files from disk, so this is
 the source of truth). A documented reference copy of the templates is at
 `~/.config/layout-manager/layouts.json`.
-
-## Reloading after config changes
-
-After editing `CONFIG`, unload and re-run the script from a terminal
-(toggling the script in System Settings does **not** reliably reload it):
-
-```bash
-qdbus6 org.kde.KWin /Scripting unloadScript layout-manager
-ID=$(qdbus6 org.kde.KWin /Scripting loadScript \
-  ~/.local/share/kwin/scripts/layout-manager/contents/code/main.js layout-manager)
-qdbus6 org.kde.KWin "/Scripting/Script$ID" run
-```
-
-The `loadScript` call returns a script id; the code only runs once you call
-`run` on the matching `/Scripting/Script<id>` node. Verify with
-`journalctl --since "1 min ago" | grep "Layout Manager"`. Do NOT restart the
-KWin compositor service to reload scripts (this black-screens the session).
-
-## Troubleshooting / iteration
-
-- Fast iteration: use `plasma-interactiveconsole --kwin` to live-test snippets.
-- Debug logs: `journalctl -f QT_CATEGORY=js QT_CATEGORY=kwin_scripting`
-  (or `kdebugsettings` -> KWin Scripting -> Full Debug).
-- Uninstall: `kpackagetool6 --type=KWin/Script -r layout-manager`
-
-## Notes / limitations
-
-- Windows that are part of KWin's built-in tiling may conflict with manual
-  `frameGeometry` placement; if a window stays in a stale tile, untile it first.
-- Shortcuts registered by the script linger in System Settings if the script
-  is later removed.
