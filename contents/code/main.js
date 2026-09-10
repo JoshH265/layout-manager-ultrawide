@@ -11,7 +11,7 @@
 //   - Center Stage : dynamic — the focused window is pulled to center, the
 //                    previous center window is pushed to a side stack
 //   - Click-Pick   : Meta+F1, then click windows in order → auto-applies a
-//                    fixed composition (35/35/30 with the last two stacked)
+//                    fixed composition (30/45/25 with the last two stacked)
 //
 // INSTALL:
 //   kpackagetool6 --type=KWin/Script -i ./layout-manager/
@@ -45,10 +45,10 @@ var CONFIG = {
     // topFrac/heightFrac (y).
     pick: {
         slots: [
-            { name: "s1", leftFrac: 0.0, widthFrac: 0.35, topFrac: 0.0, heightFrac: 1.0 },
-            { name: "s2", leftFrac: 0.35, widthFrac: 0.35, topFrac: 0.0, heightFrac: 1.0 },
-            { name: "s3", leftFrac: 0.7, widthFrac: 0.30, topFrac: 0.0, heightFrac: 0.5 },
-            { name: "s4", leftFrac: 0.7, widthFrac: 0.30, topFrac: 0.5, heightFrac: 0.5 }
+            { name: "s1", leftFrac: 0.0, widthFrac: 0.30, topFrac: 0.0, heightFrac: 1.0 },
+            { name: "s2", leftFrac: 0.3, widthFrac: 0.45, topFrac: 0.0, heightFrac: 1.0 },
+            { name: "s3", leftFrac: 0.75, widthFrac: 0.25, topFrac: 0.0, heightFrac: 0.5 },
+            { name: "s4", leftFrac: 0.75, widthFrac: 0.25, topFrac: 0.5, heightFrac: 0.5 }
         ]
     },
 

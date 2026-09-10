@@ -40,8 +40,8 @@ stay full-height.
 3. The 4-slot template auto-applies once 4 windows are picked:
 
 ```
-|   pick 1 (35%)  |  pick 2 (35%)  |  pick 3 (30%, top)  |
-|                 |                 |  pick 4 (30%, bottom) |
+|   pick 1 (30%)  |   pick 2 (45%)  |  pick 3 (25%, top)  |
+|                 |                 |  pick 4 (25%, bottom) |
 ```
 
 - Re-clicking an already-picked window removes it (toggle).
